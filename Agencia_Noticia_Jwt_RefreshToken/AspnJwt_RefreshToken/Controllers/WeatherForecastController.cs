@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Web.Resource;
 
 namespace AspnJwt_RefreshToken.Controllers
 {
+    [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
     [Authorize]
     [ApiController]
     [Route("[controller]")]
